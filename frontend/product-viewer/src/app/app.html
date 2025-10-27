@@ -1,0 +1,43 @@
+<div class="container">
+
+  <h1>Catálogo de Productos</h1>
+
+  <!-- Contenedor de la cuadrícula de productos -->
+  <div class="product-grid">
+
+    <!--
+      Tarjeta de Producto (se repite para cada producto)
+      Usamos *ngFor para iterar sobre la lista 'products'
+    -->
+    <div *ngFor="let product of products" class="product-card">
+
+      <!--
+        Imagen del Producto
+      -->
+      <img [src]="product.imageUrl"
+           [alt]="product.name"
+           class="product-image">
+
+      <!-- Contenido de la Tarjeta -->
+      <div class="product-info">
+        <h2 class="product-name" [title]="product.name">
+          {{ product.name }}
+        </h2>
+        <p class="product-price">
+          {{ product.price | currency:'EUR':'symbol' }}
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Mensajes de Carga o Error -->
+  <div *ngIf="loading" class="loading-message">
+    Cargando productos...
+  </div>
+
+  <div *ngIf="error" class="error-message">
+    {{ error }}
+  </div>
+
+</div>

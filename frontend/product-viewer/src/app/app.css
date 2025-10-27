@@ -1,0 +1,78 @@
+/* Contenedor principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto; /* Centrar el contenedor */
+  padding: 2rem;
+}
+
+/* Título principal */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 2.5rem;
+}
+
+/* Rejilla de productos */
+.product-grid {
+  display: grid;
+  /* Crea columnas automáticas de 280px, responsive */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem; /* Espacio entre tarjetas */
+}
+
+/* Tarjeta de producto individual */
+.product-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden; /* Para que la imagen no se salga */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px); /* Efecto al pasar el ratón */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Imagen del producto */
+.product-image {
+  width: 100%;
+  height: 220px; /* Altura fija para la imagen */
+  object-fit: cover; /* Recorta la imagen para que encaje */
+  display: block;
+}
+
+/* Contenedor de la info (nombre, precio) */
+.product-info {
+  padding: 1.5rem;
+}
+
+/* Nombre del producto */
+.product-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #222;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 0 0.5rem 0;
+}
+
+.product-price {
+  font-size: 1.25rem; /* 20px */
+  color: #555;
+  margin: 0;
+}
+
+.loading-message, .error-message {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #666;
+  margin-top: 2.5rem;
+}
+
+.error-message {
+  color: #d9534f;
+}
