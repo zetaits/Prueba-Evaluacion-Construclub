@@ -1,0 +1,12 @@
+# Ignorar logs y carpetas de IDE
+.idea/
+*.iml
+*.log
+
+# Ignorar artefactos de compilación de Java/Maven (Backend)
+/backend/target/
+
+# Ignorar dependencias y compilados de Node/Angular (Frontend)
+/frontend/product-viewer/node_modules/
+/frontend/product-viewer/dist/
+/frontend/product-viewer/.angular/
